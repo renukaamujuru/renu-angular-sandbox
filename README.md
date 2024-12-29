@@ -26,7 +26,28 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
 
-#used commands ##### 25-12-2024
+# used commands for project creation ##### 25-12-2024
 node -v => v22.9.0
 npm -v => 10.8.3
 ng new renu-angular-sandbox
+
+# commands used to upload project in github
+create a new repo in github
+git init
+git add *
+git commit -m "my first commit"
+git remote add origin https://github.com/renukaamujuru/renu-angular-sandbox-.git
+git push --set-upstream origin master
+
+# host website
+Rename repo name to renu-angular-sandbox.github.io
+In local machine - git clone https://github.com/renukaamujuru/renu-angular-sandbox.github.io
+ng add angular-cli-ghpages
+>ng deploy --base-href=https://github.com/renukaamujuru/renu-angular-sandbox.github.io --name=renukaamujuru --email=renukaamujuru@gmail.com
+
+chanage outputPath in angular.json
+"outputPath": "dist/renu-angular-sandbox.github.io",
+ng build --base-href "https://renukaamujuru.github.io/renu-angular-sandbox.github.io/"
+ng build --configuration production --base-href "https://renukaamujuru.github.io/renu-angular-sandbox.github.io/"
+
+npx angular-cli-ghpages --dir=dist/renu-angular-sandbox
